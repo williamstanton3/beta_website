@@ -1,0 +1,96 @@
+[
+  {
+    "id": "marshall-birkey",
+    "first_name": "Marshall",
+    "last_name": "Birkey",
+    "email": "BirkeyMM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "zach-hillegas",
+    "first_name": "Zach",
+    "last_name": "Hillegas",
+    "email": "HillegasZT1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "daniel-knutsen",
+    "first_name": "Daniel",
+    "last_name": "Knutsen",
+    "email": "KnutsenDO1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "jacob-morrison",
+    "first_name": "Jacob",
+    "last_name": "Morrison",
+    "email": "MorrisonJT1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "andrew-shesman",
+    "first_name": "Andrew",
+    "last_name": "Shesman",
+    "email": "ShesmanAC1@gcc.edu",
+    "roles": [
+      "Secretary"
+    ],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "josh-smith",
+    "first_name": "Josh",
+    "last_name": "Smith",
+    "email": "SmithJB1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "tim-stuitje",
+    "first_name": "Tim",
+    "last_name": "Stuitje",
+    "email": "StuitjeTJ1@gcc.edu",
+    "roles": [
+      "Sergeant at Arms"
+    ],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "seth-thompson",
+    "first_name": "Seth",
+    "last_name": "Thompson",
+    "email": "ThompsonSD1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "brian-wolanin",
+    "first_name": "Brian",
+    "last_name": "Wolanin",
+    "email": "WolaninBH1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  }
+]

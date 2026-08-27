@@ -1,0 +1,14 @@
+# Beta Sigma Backend Dependencies
+# Install with: pip install -r requirements.txt
+
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+email-validator==2.2.0
+
+# JWT authentication for the admin panel
+PyJWT==2.10.1
+
+# Required by FastAPI to handle multipart/form-data file uploads
+python-multipart==0.0.20

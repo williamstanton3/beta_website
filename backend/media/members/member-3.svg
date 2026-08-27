@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="450" viewBox="0 0 400 450">
+  <defs>
+    <linearGradient id="bg3" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d1f38;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="body3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a227;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#a8871e;stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="450" fill="url(#bg3)"/>
+  <rect x="0" y="0" width="400" height="4" fill="#c9a227" fill-opacity="0.5"/>
+  <circle cx="200" cy="155" r="72" fill="url(#body3)"/>
+  <rect x="176" y="215" width="48" height="30" rx="8" fill="url(#body3)"/>
+  <path d="M 55 450 Q 55 310 200 290 Q 345 310 345 450 Z" fill="url(#body3)"/>
+  <rect x="0" y="395" width="400" height="55" fill="rgba(0,0,0,0.5)"/>
+  <text x="200" y="418" text-anchor="middle" fill="#c9a227" font-family="Georgia,serif" font-size="14" font-weight="bold" letter-spacing="2">BETA SIGMA</text>
+  <text x="200" y="438" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif" font-size="12">Rush Chair</text>
+</svg>

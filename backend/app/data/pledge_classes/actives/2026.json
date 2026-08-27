@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sam-porter",
+    "first_name": "Sam",
+    "last_name": "Porter",
+    "email": "",
+    "roles": [],
+    "major": "Business",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  },
+  {
+    "id": "owen-thomas",
+    "first_name": "Owen",
+    "last_name": "Thomas",
+    "email": "",
+    "roles": [],
+    "major": "Accounting and Finance",
+    "hometown": "Detroit, MI",
+    "bio": ""
+  },
+  {
+    "id": "harrison-houle",
+    "first_name": "Harrison",
+    "last_name": "Houle",
+    "email": "",
+    "roles": [],
+    "major": "Finance",
+    "hometown": "Rochester, NY",
+    "bio": ""
+  },
+  {
+    "id": "topher-drombetta",
+    "first_name": "Topher",
+    "last_name": "Drombetta",
+    "email": "",
+    "roles": [],
+    "major": "Accounting and Finance",
+    "hometown": "Youngstown, OH",
+    "bio": ""
+  },
+  {
+    "id": "jared-kauffman",
+    "first_name": "Jared",
+    "last_name": "Kauffman",
+    "email": "",
+    "roles": [],
+    "major": "Accounting",
+    "hometown": "New Castle, PA",
+    "bio": ""
+  },
+  {
+    "id": "nick-remish",
+    "first_name": "Nick",
+    "last_name": "Remish",
+    "email": "",
+    "roles": [],
+    "major": "Business",
+    "hometown": "Philadelphia, PA",
+    "bio": ""
+  },
+  {
+    "id": "nate-frey",
+    "first_name": "Nate",
+    "last_name": "Frey",
+    "email": "",
+    "roles": [],
+    "major": "Business",
+    "hometown": "Columbia, MD",
+    "bio": ""
+  },
+  {
+    "id": "luis-sanchez",
+    "first_name": "Luis",
+    "last_name": "Sanchez",
+    "email": "",
+    "roles": [],
+    "major": "Computer Science",
+    "hometown": "Fairfax, VA",
+    "bio": ""
+  },
+  {
+    "id": "johnny-reyes",
+    "first_name": "Johnny",
+    "last_name": "Reyes",
+    "email": "",
+    "roles": [],
+    "major": "Nursing",
+    "hometown": "Cleveland, OH",
+    "bio": ""
+  },
+  {
+    "id": "noah-mackie",
+    "first_name": "Noah",
+    "last_name": "Mackie",
+    "email": "",
+    "roles": [],
+    "major": "Business",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  },
+  {
+    "id": "junior-krahe",
+    "first_name": "Junior",
+    "last_name": "Krahe",
+    "email": "",
+    "roles": [],
+    "major": "Business",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  },
+  {
+    "id": "kohler-stewart",
+    "first_name": "Kohler",
+    "last_name": "Stewart",
+    "email": "",
+    "roles": [],
+    "major": "Business",
+    "hometown": "Buffalo, NY",
+    "bio": ""
+  }
+]

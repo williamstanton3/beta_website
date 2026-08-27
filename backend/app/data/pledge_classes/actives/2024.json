@@ -1,0 +1,130 @@
+[
+  {
+    "id": "bill-stanton",
+    "first_name": "Bill",
+    "last_name": "Stanton",
+    "email": "",
+    "roles": [
+      "Vice President"
+    ],
+    "major": "Computer Science",
+    "hometown": "Frederick, MD",
+    "bio": ""
+  },
+  {
+    "id": "nico-dangelo",
+    "first_name": "Nico",
+    "last_name": "DAngelo",
+    "email": "",
+    "roles": [
+      "President"
+    ],
+    "major": "Accounting & Finance",
+    "hometown": "Mars, PA",
+    "bio": ""
+  },
+  {
+    "id": "kaden-kenlein",
+    "first_name": "Kaden",
+    "last_name": "Kenlein",
+    "email": "",
+    "roles": [],
+    "major": "Entrepreneurship",
+    "hometown": "Spokane, WA",
+    "bio": ""
+  },
+  {
+    "id": "liam-hale",
+    "first_name": "Liam",
+    "last_name": "Hale",
+    "email": "",
+    "roles": [],
+    "major": "Biochemistry",
+    "hometown": "Lancaster, PA",
+    "bio": ""
+  },
+  {
+    "id": "rocco-pellegrino",
+    "first_name": "Rocco",
+    "last_name": "Pellegrino",
+    "email": "",
+    "roles": [],
+    "major": "Mechanical Engineering",
+    "hometown": "Butler, PA",
+    "bio": ""
+  },
+  {
+    "id": "andrew-kessler",
+    "first_name": "Andrew",
+    "last_name": "Kessler",
+    "email": "",
+    "roles": [],
+    "major": "Exercise Science",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  },
+  {
+    "id": "carson-good",
+    "first_name": "Carson",
+    "last_name": "Good",
+    "email": "",
+    "roles": [],
+    "major": "Supply Chain Management",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  },
+  {
+    "id": "craig-fair",
+    "first_name": "Craig",
+    "last_name": "Fair",
+    "email": "",
+    "roles": [],
+    "major": "Mathematics",
+    "hometown": "Lancaster, PA",
+    "bio": ""
+  },
+  {
+    "id": "max-gianneski",
+    "first_name": "Max",
+    "last_name": "Gianneski",
+    "email": "",
+    "roles": [],
+    "major": "Elementary Education",
+    "hometown": "Butler, PA",
+    "bio": ""
+  },
+  {
+    "id": "malachi-manges",
+    "first_name": "Malachi",
+    "last_name": "Manges",
+    "email": "",
+    "roles": [
+      "IF Rep"
+    ],
+    "major": "Mechanical Engineering",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  },
+  {
+    "id": "adam-weber",
+    "first_name": "Adam",
+    "last_name": "Weber",
+    "email": "",
+    "roles": [
+      "Treasurer"
+    ],
+    "major": "Mechanical Engineering",
+    "hometown": "McKees Rocks, PA",
+    "bio": ""
+  },
+  {
+    "id": "wil-peters",
+    "first_name": "Wil",
+    "last_name": "Peters",
+    "email": "",
+    "roles": [],
+    "major": "Finance and Management",
+    "hometown": "Mesa, AZ",
+    "bio": ""
+  }
+]

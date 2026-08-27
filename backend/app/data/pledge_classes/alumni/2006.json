@@ -1,0 +1,102 @@
+[
+  {
+    "id": "scott-degelman",
+    "first_name": "Scott",
+    "last_name": "Degelman",
+    "email": "DegelmanSA1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "shawn-gerber",
+    "first_name": "Shawn",
+    "last_name": "Gerber",
+    "email": "GerberSM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "john-horst",
+    "first_name": "John",
+    "last_name": "Horst",
+    "email": "HorstJP1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "ross-kucks",
+    "first_name": "Ross",
+    "last_name": "Kucks",
+    "email": "KucksRM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "sam-lyon",
+    "first_name": "Sam",
+    "last_name": "Lyon",
+    "email": "LyonSC2@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "greg-mottet",
+    "first_name": "Greg",
+    "last_name": "Mottet",
+    "email": "MottetGL1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "darrius-pugh",
+    "first_name": "Darrius",
+    "last_name": "Pugh",
+    "email": "PughDC1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "mark-warner",
+    "first_name": "Mark",
+    "last_name": "Warner",
+    "email": "WarnerMD1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "christopher-weber",
+    "first_name": "Christopher",
+    "last_name": "Weber",
+    "email": "WeberCJ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "daniel-wilkinson",
+    "first_name": "Daniel",
+    "last_name": "Wilkinson",
+    "email": "WilkinsonDA1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  }
+]

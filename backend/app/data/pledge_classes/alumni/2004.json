@@ -1,0 +1,88 @@
+[
+  {
+    "id": "chad-ashby",
+    "first_name": "Chad",
+    "last_name": "Ashby",
+    "email": "AshbyCC1@gcc.edu",
+    "roles": [
+      "President"
+    ],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "joey-cortez",
+    "first_name": "Joey",
+    "last_name": "Cortez",
+    "email": "CortezJD1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "josh-gillespie",
+    "first_name": "Josh",
+    "last_name": "Gillespie",
+    "email": "GillespieJJ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "justin-horst",
+    "first_name": "Justin",
+    "last_name": "Horst",
+    "email": "HorstJC1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "josiah-leuenberger",
+    "first_name": "Josiah",
+    "last_name": "Leuenberger",
+    "email": "LeuenbergerJJ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "ben-read",
+    "first_name": "Ben",
+    "last_name": "Read",
+    "email": "ReadBH1@gcc.edu",
+    "roles": [
+      "Treasurer"
+    ],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "jamie-skyrm",
+    "first_name": "Jamie",
+    "last_name": "Skyrm",
+    "email": "SkyrmJP1@gcc.edu",
+    "roles": [
+      "Vice President"
+    ],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "nate-wass",
+    "first_name": "Nate",
+    "last_name": "Wass",
+    "email": "WassND1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  }
+]

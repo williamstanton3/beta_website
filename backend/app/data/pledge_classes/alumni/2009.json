@@ -1,0 +1,72 @@
+[
+  {
+    "id": "connor-cooper",
+    "first_name": "Connor",
+    "last_name": "Cooper",
+    "email": "CooperCC1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "stephen-katulich",
+    "first_name": "Stephen",
+    "last_name": "Katulich",
+    "email": "KatulichSR1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "justin-polidora",
+    "first_name": "Justin",
+    "last_name": "Polidora",
+    "email": "",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "spencer-stevenson",
+    "first_name": "Spencer",
+    "last_name": "Stevenson",
+    "email": "StevensonSJ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "timothy-steffens",
+    "first_name": "Timothy",
+    "last_name": "Steffens",
+    "email": "SteffensTE1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "bryan-wetstone",
+    "first_name": "Bryan",
+    "last_name": "Wetstone",
+    "email": "WetstoneBM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "alex-young",
+    "first_name": "Alex",
+    "last_name": "Young",
+    "email": "YoungAJ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  }
+]

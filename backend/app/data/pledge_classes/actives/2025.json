@@ -1,0 +1,107 @@
+[
+  {
+    "id": "james-fisher",
+    "first_name": "James",
+    "last_name": "Fisher",
+    "email": "",
+    "roles": [
+      "Chaplain"
+    ],
+    "major": "Mechanical Engineering",
+    "hometown": "Hershey, PA",
+    "bio": ""
+  },
+  {
+    "id": "wade-springer",
+    "first_name": "Wade",
+    "last_name": "Springer",
+    "email": "",
+    "roles": [
+      "Secretary",
+      "Merch Chair"
+    ],
+    "major": "Biochemistry",
+    "hometown": "Goshen, IN",
+    "bio": ""
+  },
+  {
+    "id": "luke-gronbeck",
+    "first_name": "Luke",
+    "last_name": "Gronbeck",
+    "email": "",
+    "roles": [],
+    "major": "Mechanical Engineering",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  },
+  {
+    "id": "jack-atchley",
+    "first_name": "Jack",
+    "last_name": "Atchley",
+    "email": "",
+    "roles": [],
+    "major": "Accounting",
+    "hometown": "Knoxville, TN",
+    "bio": ""
+  },
+  {
+    "id": "josh-good",
+    "first_name": "Josh",
+    "last_name": "Good",
+    "email": "",
+    "roles": [],
+    "major": "Mechanical Engineering",
+    "hometown": "Annville, PA",
+    "bio": ""
+  },
+  {
+    "id": "lincoln-carter",
+    "first_name": "Lincoln",
+    "last_name": "Carter",
+    "email": "",
+    "roles": [],
+    "major": "Accounting",
+    "hometown": "Topeka, KS",
+    "bio": ""
+  },
+  {
+    "id": "dash-lanzilotta",
+    "first_name": "Dash",
+    "last_name": "Lanzilotta",
+    "email": "",
+    "roles": [],
+    "major": "Entrepreneurship",
+    "hometown": "Cleveland, OH",
+    "bio": ""
+  },
+  {
+    "id": "jackson-myers",
+    "first_name": "Jackson",
+    "last_name": "Myers",
+    "email": "",
+    "roles": [],
+    "major": "Elementary and Special Education",
+    "hometown": "Ellwood City, PA",
+    "bio": ""
+  },
+  {
+    "id": "keith-otto",
+    "first_name": "Keith",
+    "last_name": "Otto",
+    "email": "",
+    "roles": [],
+    "major": "Middle Level Education: Science/History",
+    "hometown": "Irwin, PA",
+    "bio": ""
+  },
+  {
+    "id": "seth-hartman",
+    "first_name": "Seth",
+    "last_name": "Hartman",
+    "email": "",
+    "roles": [],
+    "major": "Business",
+    "hometown": "Pittsburgh, PA",
+    "bio": ""
+  }
+]

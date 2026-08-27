@@ -1,0 +1,72 @@
+[
+  {
+    "id": "benjamin-colas",
+    "first_name": "Benjamin",
+    "last_name": "Colas",
+    "email": "ColasBM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "jared-crist",
+    "first_name": "Jared",
+    "last_name": "Crist",
+    "email": "CristJL1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "andrew-holt",
+    "first_name": "Andrew",
+    "last_name": "Holt",
+    "email": "HoltAT1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "brian-jennings",
+    "first_name": "Brian",
+    "last_name": "Jennings",
+    "email": "JenningsBM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "bryce-kauffman",
+    "first_name": "Bryce",
+    "last_name": "Kauffman",
+    "email": "KauffmanBT1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "samuel-leuenberger",
+    "first_name": "Samuel",
+    "last_name": "Leuenberger",
+    "email": "LeuenbergerSK1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "mark-stinson",
+    "first_name": "Mark",
+    "last_name": "Stinson",
+    "email": "StinsonMB1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  }
+]

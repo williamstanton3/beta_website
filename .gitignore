@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Backend (Python)
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.db
+backend/.env
+
+# Raw alumni contact spreadsheets — contain personal info (emails, etc.)
+# not meant for a public repo. Emails have already been extracted into
+# backend/app/data/pledge_classes/**/*.json, so these aren't needed to run the app.
+backend/app/data/source_archives/
+
+# Frontend (Node)
+frontend/node_modules/
+frontend/dist/
+
+# Editors
+.vscode/
+.idea/

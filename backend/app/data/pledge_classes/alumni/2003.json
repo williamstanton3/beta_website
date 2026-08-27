@@ -1,0 +1,172 @@
+[
+  {
+    "id": "brian-anderson",
+    "first_name": "Brian",
+    "last_name": "Anderson",
+    "email": "AndersonBZ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "chris-borders",
+    "first_name": "Chris",
+    "last_name": "Borders",
+    "email": "BordersCT1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "jonathan-breese",
+    "first_name": "Jonathan",
+    "last_name": "Breese",
+    "email": "BreeseJM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "matt-campbell",
+    "first_name": "Matt",
+    "last_name": "Campbell",
+    "email": "CampbellME1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "eric-fontenault",
+    "first_name": "Eric",
+    "last_name": "Fontenault",
+    "email": "FontenaultEM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "doug-haus",
+    "first_name": "Doug",
+    "last_name": "Haus",
+    "email": "HausDM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "andy-leuenberger",
+    "first_name": "Andy",
+    "last_name": "Leuenberger",
+    "email": "LeuenbergerAH1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "brendan-mccommas",
+    "first_name": "Brendan",
+    "last_name": "McCommas",
+    "email": "McCommasBN1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "stuart-mccommas",
+    "first_name": "Stuart",
+    "last_name": "McCommas",
+    "email": "McCommasSS1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "jeff-moreau",
+    "first_name": "Jeff",
+    "last_name": "Moreau",
+    "email": "MoreauJA1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "matt-morelli",
+    "first_name": "Matt",
+    "last_name": "Morelli",
+    "email": "MorelliMJ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "rob-morrow",
+    "first_name": "Rob",
+    "last_name": "Morrow",
+    "email": "MorrowRJ1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "jamie-powell",
+    "first_name": "Jamie",
+    "last_name": "Powell",
+    "email": "PowellJM2@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "ian-prince",
+    "first_name": "Ian",
+    "last_name": "Prince",
+    "email": "PrinceIC1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "adam-schreffler",
+    "first_name": "Adam",
+    "last_name": "Schreffler",
+    "email": "SchrefflerAD1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "matt-wilson",
+    "first_name": "Matt",
+    "last_name": "Wilson",
+    "email": "WilsonMT1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  },
+  {
+    "id": "joe-woodring",
+    "first_name": "Joe",
+    "last_name": "Woodring",
+    "email": "WoodringJM1@gcc.edu",
+    "roles": [],
+    "major": "",
+    "hometown": "",
+    "bio": ""
+  }
+]
