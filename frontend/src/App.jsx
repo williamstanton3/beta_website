@@ -5,7 +5,7 @@
  * Public routes: /, /about, /brothers, /events, /rush, /gallery, /donate, /contact
  * Admin routes:  /admin/login, /admin (dashboard), /admin/members, /admin/events,
  *                /admin/announcements, /admin/gallery, /admin/pledge-classes, /admin/donate,
- *                /admin/contact
+ *                /admin/contact, /admin/rush, /admin/messages
  */
 
 import { Routes, Route } from "react-router-dom";
@@ -34,6 +34,8 @@ import AdminGallery from "./pages/admin/AdminGallery.jsx";
 import AdminPledgeClasses from "./pages/admin/AdminPledgeClasses.jsx";
 import AdminDonate from "./pages/admin/AdminDonate.jsx";
 import AdminContact from "./pages/admin/AdminContact.jsx";
+import AdminRush from "./pages/admin/AdminRush.jsx";
+import AdminMessages from "./pages/admin/AdminMessages.jsx";
 
 export default function App() {
   return (
@@ -58,6 +60,8 @@ export default function App() {
       <Route path="/admin/pledge-classes" element={<ProtectedRoute><AdminPledgeClasses /></ProtectedRoute>} />
       <Route path="/admin/donate" element={<ProtectedRoute><AdminDonate /></ProtectedRoute>} />
       <Route path="/admin/contact" element={<ProtectedRoute><AdminContact /></ProtectedRoute>} />
+      <Route path="/admin/rush" element={<ProtectedRoute><AdminRush /></ProtectedRoute>} />
+      <Route path="/admin/messages" element={<ProtectedRoute><AdminMessages /></ProtectedRoute>} />
 
       {/* ---------------------------------------------------------------- */}
       {/* Public routes — wrapped in the site navbar + footer              */}

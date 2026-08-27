@@ -16,9 +16,6 @@ class Settings(BaseSettings):
     # Human-readable name shown in API docs and health checks
     app_name: str = "Beta Sigma Fraternity API"
 
-    # SQLite database file path (relative to the backend/ directory when running locally)
-    database_path: str = "beta_sigma.db"
-
     # Allowed browser origins for CORS (the Vite dev server runs on 5173 by default)
     cors_origins: list[str] = [
         "http://localhost:5173",
@@ -41,6 +38,18 @@ class Settings(BaseSettings):
 
     # How many hours a login session lasts before the token expires
     jwt_expire_hours: int = 8
+
+    # --------------------------------------------------------------------------
+    # Storage locations
+    # --------------------------------------------------------------------------
+
+    # Where JSON content (app/data/) and uploaded media (media/) are stored.
+    # Left unset, both default to folders next to the app's source code — fine
+    # for local development. In production (e.g. Railway), point these at a
+    # mounted persistent volume so admin edits/uploads survive redeploys,
+    # since the source code itself is rebuilt fresh on every deploy.
+    data_dir: str | None = None
+    media_dir: str | None = None
 
     class Config:
         # Automatically load variables from a .env file if it exists

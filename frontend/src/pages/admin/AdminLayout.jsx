@@ -14,8 +14,10 @@ const ADMIN_NAV = [
   { to: "/admin/announcements",  label: "News" },
   { to: "/admin/gallery",        label: "Gallery" },
   { to: "/admin/pledge-classes", label: "Pledge Classes" },
+  { to: "/admin/rush",           label: "Rush" },
   { to: "/admin/donate",         label: "Donate" },
   { to: "/admin/contact",        label: "Contact" },
+  { to: "/admin/messages",       label: "Messages" },
 ];
 
 export default function AdminLayout({ title, children }) {

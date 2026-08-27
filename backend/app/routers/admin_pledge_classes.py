@@ -3,6 +3,8 @@ Admin endpoints for pledge class photos and videos.
 
 Each pledge class year gets its own subfolder under media/pledge_classes/{year}/.
 Officers can upload photos per year, view all years, and delete items.
+Metadata (title, display order, upload time) lives in
+app/data/pledge_class_media.json — the files themselves stay on disk.
 """
 
 import uuid
@@ -11,8 +13,9 @@ from pathlib import Path
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Request, UploadFile
 
+from app import content_store
 from app.auth import require_auth
-from app.database import get_db_connection, get_media_dir
+from app.database import get_media_dir
 from app.models import PledgeClassMediaResponse
 
 router = APIRouter(prefix="/admin/pledge-classes", tags=["Admin — Pledge Classes"])
@@ -24,12 +27,20 @@ ALLOWED_EXTENSIONS = {
 VIDEO_EXTENSIONS = {".mp4", ".mov", ".webm"}
 
 
+def _load() -> list[dict]:
+    return content_store.load("pledge_class_media.json", [])
+
+
+def _save(items: list[dict]) -> None:
+    content_store.save("pledge_class_media.json", items)
+
+
 def _build_file_url(request: Request, file_path: str) -> str:
     base = str(request.base_url).rstrip("/")
     return f"{base}/media/{file_path}"
 
 
-def _row_to_response(row, request: Request) -> PledgeClassMediaResponse:
+def _row_to_response(row: dict, request: Request) -> PledgeClassMediaResponse:
     return PledgeClassMediaResponse(
         id=row["id"],
         year=row["year"],
@@ -44,21 +55,15 @@ def _row_to_response(row, request: Request) -> PledgeClassMediaResponse:
 @router.get("", response_model=list[PledgeClassMediaResponse])
 def list_all_pledge_media(request: Request, _=Depends(require_auth)):
     """Return all pledge class media sorted by year and order (admin view)."""
-    with get_db_connection() as conn:
-        rows = conn.execute(
-            "SELECT * FROM pledge_class_media ORDER BY year DESC, display_order ASC"
-        ).fetchall()
-    return [_row_to_response(r, request) for r in rows]
+    items = sorted(_load(), key=lambda m: (-m["year"], m["display_order"]))
+    return [_row_to_response(m, request) for m in items]
 
 
 @router.get("/years")
 def list_pledge_years(_=Depends(require_auth)):
     """Return the distinct years that have pledge class media uploaded."""
-    with get_db_connection() as conn:
-        rows = conn.execute(
-            "SELECT DISTINCT year FROM pledge_class_media ORDER BY year DESC"
-        ).fetchall()
-    return [r["year"] for r in rows]
+    years = {m["year"] for m in _load()}
+    return sorted(years, reverse=True)
 
 
 @router.post("", response_model=PledgeClassMediaResponse, status_code=201)
@@ -95,28 +100,32 @@ async def upload_pledge_media(
     content = await file.read()
     dest.write_bytes(content)
 
-    uploaded_at = datetime.utcnow().isoformat()
+    items = _load()
+    item = {
+        "id": content_store.next_id(items),
+        "year": year,
+        "title": title or f"Class of {year}",
+        "file_path": filename,
+        "media_type": media_type,
+        "display_order": display_order,
+        "uploaded_at": datetime.utcnow().isoformat(),
+    }
+    items.append(item)
+    _save(items)
 
-    with get_db_connection() as conn:
-        cursor = conn.execute(
-            "INSERT INTO pledge_class_media (year, title, file_path, media_type, display_order, uploaded_at) VALUES (?, ?, ?, ?, ?, ?)",
-            (year, title or f"Class of {year}", filename, media_type, display_order, uploaded_at),
-        )
-        row = conn.execute("SELECT * FROM pledge_class_media WHERE id = ?", (cursor.lastrowid,)).fetchone()
-
-    return _row_to_response(row, request)
+    return _row_to_response(item, request)
 
 
 @router.delete("/{item_id}", status_code=204)
 def delete_pledge_media(item_id: int, _=Depends(require_auth)):
     """Delete a pledge class media item and its file from disk."""
-    with get_db_connection() as conn:
-        row = conn.execute("SELECT * FROM pledge_class_media WHERE id = ?", (item_id,)).fetchone()
-        if not row:
-            raise HTTPException(status_code=404, detail="Item not found")
+    items = _load()
+    item = next((m for m in items if m["id"] == item_id), None)
+    if not item:
+        raise HTTPException(status_code=404, detail="Item not found")
 
-        file_path = get_media_dir() / row["file_path"]
-        if file_path.exists() and not str(row["file_path"]).endswith(".svg"):
-            file_path.unlink(missing_ok=True)
+    file_path = get_media_dir() / item["file_path"]
+    if file_path.exists() and not str(item["file_path"]).endswith(".svg"):
+        file_path.unlink(missing_ok=True)
 
-        conn.execute("DELETE FROM pledge_class_media WHERE id = ?", (item_id,))
+    _save([m for m in items if m["id"] != item_id])

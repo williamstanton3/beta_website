@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "section_title": "Why Beta Sigma?",
+    "section_content": "Beta Sigma is built on brotherhood, scholarship, and service. We seek men who want to grow academically, lead on campus, and give back to the community.",
+    "display_order": 1
+  },
+  {
+    "id": 2,
+    "section_title": "What to Expect During Rush",
+    "section_content": "Rush is a mutual selection process. Come to our events, ask questions, and get to know the chapter. There is no obligation \u2014 just show up as yourself.",
+    "display_order": 2
+  },
+  {
+    "id": 3,
+    "section_title": "Requirements",
+    "section_content": "Prospective members must be enrolled full-time, maintain good academic standing, and demonstrate character aligned with our fraternity values.",
+    "display_order": 3
+  },
+  {
+    "id": 4,
+    "section_title": "Important Dates",
+    "section_content": "Rush Week: August 25\u201331, 2026 | Interviews: September 1\u20133 | Bid Day: September 5, 2026",
+    "display_order": 4
+  }
+]

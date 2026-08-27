@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Fall 2026 Rush Registration Open",
+    "content": "Sign up for rush events through the Rush page. We can't wait to meet you!",
+    "posted_at": "2026-06-18",
+    "is_featured": true
+  },
+  {
+    "id": 3,
+    "title": "Study Hours Schedule Posted",
+    "content": "Weekly group study sessions are held in the library every Tuesday and Thursday.",
+    "posted_at": "2026-06-10",
+    "is_featured": false
+  },
+  {
+    "id": 2,
+    "title": "Chapter Wins Excellence Award",
+    "content": "Beta Sigma received the university's Outstanding Fraternity Chapter award this spring.",
+    "posted_at": "2026-05-01",
+    "is_featured": true
+  }
+]

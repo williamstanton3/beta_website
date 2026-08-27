@@ -19,9 +19,10 @@ import json
 import re
 from pathlib import Path
 
+from app.content_store import DATA_DIR as APP_DATA_DIR
 from app.database import get_media_dir
 
-DATA_DIR    = Path(__file__).resolve().parent / "data" / "pledge_classes"
+DATA_DIR    = APP_DATA_DIR / "pledge_classes"
 ACTIVES_DIR = DATA_DIR / "actives"
 ALUMNI_DIR  = DATA_DIR / "alumni"
 

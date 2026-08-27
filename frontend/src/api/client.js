@@ -242,3 +242,19 @@ export const adminUpdateDonateInfo = (data, token) => apiPut("/api/admin/donate"
 
 export const adminGetContactInfo = (token) => apiGet("/api/admin/contact", token);
 export const adminUpdateContactInfo = (data, token) => apiPut("/api/admin/contact", data, token);
+
+// -------------------------------------------------------------------------- //
+// Admin — Rush Page Content
+// -------------------------------------------------------------------------- //
+
+export const adminGetRushInfo = (token) => apiGet("/api/admin/rush", token);
+export const adminCreateRushInfo = (data, token) => apiPost("/api/admin/rush", data, token);
+export const adminUpdateRushInfo = (id, data, token) => apiPut(`/api/admin/rush/${id}`, data, token);
+export const adminDeleteRushInfo = (id, token) => apiDelete(`/api/admin/rush/${id}`, token);
+
+// -------------------------------------------------------------------------- //
+// Admin — Contact Form Messages
+// -------------------------------------------------------------------------- //
+
+export const adminGetMessages = (token) => apiGet("/api/admin/messages", token);
+export const adminDeleteMessage = (id, token) => apiDelete(`/api/admin/messages/${id}`, token);

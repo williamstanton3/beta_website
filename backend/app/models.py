@@ -130,6 +130,20 @@ class RushInfoResponse(BaseModel):
         from_attributes = True
 
 
+class RushInfoCreate(BaseModel):
+    """Payload for creating a new rush info section via the admin panel."""
+    section_title: str
+    section_content: str
+    display_order: int = 0
+
+
+class RushInfoUpdate(BaseModel):
+    """All fields optional so admin can patch individual fields."""
+    section_title: str | None = None
+    section_content: str | None = None
+    display_order: int | None = None
+
+
 # ---------------------------------------------------------------------------
 # Contact Form
 # ---------------------------------------------------------------------------
@@ -151,6 +165,17 @@ class ContactMessageResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class ContactMessageAdminResponse(BaseModel):
+    """A saved contact form submission, as shown in the admin Messages page."""
+
+    id: int
+    name: str
+    email: str
+    subject: str
+    message: str
+    submitted_at: str
 
 
 # ---------------------------------------------------------------------------

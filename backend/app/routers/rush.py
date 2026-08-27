@@ -1,15 +1,20 @@
 """
 Rush (recruitment) API routes.
 
-Delivers structured content blocks for the Rush page.
+Delivers structured content blocks for the Rush page. Backed by
+app/data/rush_info.json (see app/content_store.py) instead of a database.
 """
 
 from fastapi import APIRouter
 
-from app.database import get_db_connection
+from app import content_store
 from app.models import RushInfoResponse
 
 router = APIRouter(prefix="/rush", tags=["Rush"])
+
+
+def _load() -> list[dict]:
+    return content_store.load("rush_info.json", [])
 
 
 @router.get("", response_model=list[RushInfoResponse])
@@ -19,17 +24,5 @@ def list_rush_info():
 
     Each section becomes a card on the frontend Rush page.
     """
-    with get_db_connection() as conn:
-        rows = conn.execute(
-            "SELECT * FROM rush_info ORDER BY display_order ASC"
-        ).fetchall()
-
-    return [
-        RushInfoResponse(
-            id=row["id"],
-            section_title=row["section_title"],
-            section_content=row["section_content"],
-            display_order=row["display_order"],
-        )
-        for row in rows
-    ]
+    items = sorted(_load(), key=lambda r: r["display_order"])
+    return [RushInfoResponse(**r) for r in items]

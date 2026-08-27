@@ -1,0 +1,23 @@
+[
+  {
+    "id": 7,
+    "title": "Patio Night",
+    "description": "Beta Sigma's signature all-campus event on the Lincoln Patio.",
+    "event_date": "2026-09-18",
+    "location": "Lincoln Patio"
+  },
+  {
+    "id": 5,
+    "title": "Homecoming 2026",
+    "description": "Beta Sigma's annual homecoming celebration. Stop by our fraternity tent on Lower Campus to meet the guys, enjoy some food, and have a good time.",
+    "event_date": "2026-10-03",
+    "location": "Grove City College"
+  },
+  {
+    "id": 10,
+    "title": "Monster Mash",
+    "description": "Beta Sigma x Theta Alpha Pi annual halloween dance. Don't forget to wear a costume.",
+    "event_date": "2026-10-30",
+    "location": "Ket Rec"
+  }
+]

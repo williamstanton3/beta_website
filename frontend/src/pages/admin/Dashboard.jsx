@@ -14,7 +14,10 @@ const SECTIONS = [
   { to: "/admin/announcements", icon: "📢", label: "Announcements",  desc: "Post news and featured announcements" },
   { to: "/admin/gallery",       icon: "🖼️",  label: "Gallery",        desc: "Upload chapter photos and videos" },
   { to: "/admin/pledge-classes",icon: "🎓", label: "Pledge Classes", desc: "Manage photos for each pledge class year" },
+  { to: "/admin/rush",          icon: "🤝", label: "Rush Page",      desc: "Edit rush/recruitment page content sections" },
   { to: "/admin/donate",        icon: "💛", label: "Donate Page",    desc: "Edit donation content and payment link" },
+  { to: "/admin/contact",       icon: "✉️",  label: "Contact Page",   desc: "Edit the president's name and email" },
+  { to: "/admin/messages",      icon: "📬", label: "Messages",       desc: "View submissions from the Contact page form" },
 ];
 
 export default function Dashboard() {

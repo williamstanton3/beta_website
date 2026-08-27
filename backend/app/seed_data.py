@@ -1,112 +1,74 @@
 """
-Seed the database with sample Beta Sigma content.
+Seed the JSON content store with sample Beta Sigma content.
 
-Table rows are inserted only when a table is empty. Note that fraternity
+Each file is created only if it doesn't already exist (see
+app.content_store.load), so this is safe to call on every startup — it
+never overwrites real content once it's been created. Note that fraternity
 brothers are NOT seeded here — the Brothers page roster lives in
-app/data/pledge_classes/{year}.json (see app/roster.py).
+app/data/pledge_classes/{actives,alumni}/{year}.json (see app/roster.py).
 """
 
-import json
 from datetime import datetime
 
-from app.database import get_db_connection
+from app import content_store
 
 
-def _table_is_empty(conn, table_name: str) -> bool:
-    """Return True if the given table has zero rows."""
-    row = conn.execute(f"SELECT COUNT(*) AS count FROM {table_name}").fetchone()
-    return row["count"] == 0
+def seed_content() -> None:
+    """Create default JSON content files for a fresh checkout of the project."""
 
+    today = datetime.utcnow().strftime("%Y-%m-%d")
 
-def seed_database() -> None:
-    """
-    Insert demo events, announcements, rush info, gallery, pledge classes,
-    and donation content when each table is empty.
-    """
-    with get_db_connection() as conn:
+    content_store.load("events.json", [
+        {"id": 1, "title": "Homecoming 2026", "description": "Beta Sigma's annual homecoming celebration.",
+         "event_date": "2026-10-10", "location": "Grove City College"},
+        {"id": 2, "title": "Fall Retreat", "description": "Weekend brotherhood retreat — leadership and team building.",
+         "event_date": "2026-09-27", "location": "Western Pennsylvania"},
+        {"id": 3, "title": "Patio Night", "description": "Beta Sigma's signature all-campus event on the Lincoln Patio.",
+         "event_date": "2026-09-20", "location": "Lincoln Patio"},
+    ])
 
-        # ------------------------------------------------------------------ #
-        # Events                                                               #
-        # ------------------------------------------------------------------ #
-        if _table_is_empty(conn, "events"):
-            conn.executemany(
-                "INSERT INTO events (title, description, event_date, location) VALUES (?, ?, ?, ?)",
-                [
-                    ("Homecoming 2026", "Beta Sigma's annual homecoming celebration.",                "2026-10-10", "Grove City College"),
-                    ("Fall Retreat",    "Weekend brotherhood retreat — leadership and team building.", "2026-09-27", "Western Pennsylvania"),
-                    ("Patio Night",     "Beta Sigma's signature all-campus event on the Lincoln Patio.", "2026-09-20", "Lincoln Patio"),
-                ],
-            )
+    content_store.load("announcements.json", [
+        {"id": 1, "title": "Fall Rush Registration Open",
+         "content": "Sign up for rush events at Grove City College. We can't wait to meet you!",
+         "posted_at": today, "is_featured": True},
+        {"id": 2, "title": "800+ Alumni Strong",
+         "content": "Beta Sigma's alumni network spans decades of Grove City College graduates making an impact nationwide.",
+         "posted_at": "2026-05-01", "is_featured": True},
+        {"id": 3, "title": "Patio Night — All Campus",
+         "content": "Join us on the Lincoln Patio for one of our signature all-campus events.",
+         "posted_at": "2026-06-10", "is_featured": False},
+    ])
 
-        # ------------------------------------------------------------------ #
-        # Announcements                                                        #
-        # ------------------------------------------------------------------ #
-        if _table_is_empty(conn, "announcements"):
-            today = datetime.utcnow().strftime("%Y-%m-%d")
-            conn.executemany(
-                "INSERT INTO announcements (title, content, posted_at, is_featured) VALUES (?, ?, ?, ?)",
-                [
-                    ("Fall Rush Registration Open", "Sign up for rush events at Grove City College. We can't wait to meet you!", today, 1),
-                    ("800+ Alumni Strong",            "Beta Sigma's alumni network spans decades of Grove City College graduates making an impact nationwide.", "2026-05-01", 1),
-                    ("Patio Night — All Campus",      "Join us on the Lincoln Patio for one of our signature all-campus events.", "2026-06-10", 0),
-                ],
-            )
+    content_store.load("rush_info.json", [
+        {"id": 1, "section_title": "Why Beta Sigma?",
+         "section_content": "Founded in 1922 at Grove City College, Beta Sigma is built on integrity, quality, and tradition. We seek men who want to grow academically, lead on campus, and build lifelong brotherhood.",
+         "display_order": 1},
+        {"id": 2, "section_title": "What to Expect During Rush",
+         "section_content": "Rush is a mutual selection process. Come to our events on campus, ask questions, and get to know the chapter. There is no obligation — just show up as yourself.",
+         "display_order": 2},
+        {"id": 3, "section_title": "Requirements",
+         "section_content": "Prospective members must be enrolled at Grove City College, maintain good academic standing, and demonstrate character aligned with our fraternity values.",
+         "display_order": 3},
+        {"id": 4, "section_title": "Important Dates",
+         "section_content": "Rush Week: August 25–31, 2026 | Interviews: September 1–3 | Bid Day: September 5, 2026",
+         "display_order": 4},
+    ])
 
-        # ------------------------------------------------------------------ #
-        # Rush Info                                                            #
-        # ------------------------------------------------------------------ #
-        if _table_is_empty(conn, "rush_info"):
-            conn.executemany(
-                "INSERT INTO rush_info (section_title, section_content, display_order) VALUES (?, ?, ?)",
-                [
-                    ("Why Beta Sigma?",           "Founded in 1922 at Grove City College, Beta Sigma is built on integrity, quality, and tradition. We seek men who want to grow academically, lead on campus, and build lifelong brotherhood.", 1),
-                    ("What to Expect During Rush","Rush is a mutual selection process. Come to our events on campus, ask questions, and get to know the chapter. There is no obligation — just show up as yourself.", 2),
-                    ("Requirements",              "Prospective members must be enrolled at Grove City College, maintain good academic standing, and demonstrate character aligned with our fraternity values.", 3),
-                    ("Important Dates",           "Rush Week: August 25–31, 2026 | Interviews: September 1–3 | Bid Day: September 5, 2026", 4),
-                ],
-            )
+    content_store.load("donate_info.json", {
+        "headline": "Support Beta Sigma at Grove City College",
+        "mission_text": "Your generous donation directly supports our 30+ active brothers, "
+                        "chapter programming, and the traditions that have defined Beta Sigma "
+                        "since 1922.",
+        "impact_bullets": ["Rush Events", "Formal", "Patio Night", "Fall Party"],
+        "payment_link": "#",
+        "payment_button_text": "Donate Now",
+        "goal_amount": 1000.0,
+    })
 
-        # The public Gallery page's chapter photos section reads directly from
-        # media/gallery/{year-range}/ folders (see app/routers/gallery.py) —
-        # nothing to seed here.
+    content_store.load("contact_info.json", {
+        "president_name": "Nico DAngelo",
+        "president_email": "DAngeloDJ23@GCC.EDU",
+    })
 
-        # Pledge class group photos/videos are uploaded by officers through the
-        # admin panel (see admin_pledge_classes.py) — nothing to seed here.
-        # The individual brother roster lives in app/data/pledge_classes/{year}.json
-        # and is matched to headshots in media/pledge_classes/{year}/ (see app/roster.py).
-
-        # ------------------------------------------------------------------ #
-        # Donation Page Info                                                   #
-        # ------------------------------------------------------------------ #
-        if _table_is_empty(conn, "donate_info"):
-            conn.execute(
-                """
-                INSERT INTO donate_info
-                    (headline, mission_text, impact_bullets, payment_link, payment_button_text, goal_amount)
-                VALUES (?, ?, ?, ?, ?, ?)
-                """,
-                (
-                    "Support Beta Sigma at Grove City College",
-                    "Your generous donation directly supports our 30+ active brothers, "
-                    "chapter programming, and the traditions that have defined Beta Sigma "
-                    "since 1922.",
-                    json.dumps([
-                        "Rush Events",
-                        "Formal",
-                        "Patio Night",
-                        "Fall Party",
-                    ]),
-                    "#",   # Replace with your actual payment link
-                    "Donate Now",
-                    1000.0,
-                ),
-            )
-
-        # ------------------------------------------------------------------ #
-        # Contact Page — chapter president's info                             #
-        # ------------------------------------------------------------------ #
-        if _table_is_empty(conn, "contact_info"):
-            conn.execute(
-                "INSERT INTO contact_info (president_name, president_email) VALUES (?, ?)",
-                ("Nico DAngelo", "DAngeloDJ23@GCC.EDU"),
-            )
+    content_store.load("contact_messages.json", [])
+    content_store.load("pledge_class_media.json", [])

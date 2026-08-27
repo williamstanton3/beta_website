@@ -18,7 +18,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from app.config import settings
-from app.database import get_media_dir, init_database
+from app.database import get_media_dir
 from app.routers import about, announcements, contact, events, members, rush
 from app.routers import (
     admin_announcements,
@@ -26,27 +26,26 @@ from app.routers import (
     admin_donate,
     admin_events,
     admin_members,
+    admin_messages,
     admin_pledge_classes,
     admin_gallery,
+    admin_rush,
     auth_router,
     gallery,
 )
-from app.seed_data import seed_database
+from app.seed_data import seed_content
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """
     Startup hooks run before the server accepts requests:
-      1. Create all SQLite tables (safe to run repeatedly)
-      2. Ensure media/ subdirectories exist
-      3. Seed demo content if tables are empty
+      1. Ensure media/ subdirectories exist
+      2. Seed default JSON content files if they don't exist yet
     """
-    init_database()
     get_media_dir()     # creates media/ subdirectories if missing
-    seed_database()
+    seed_content()
     yield
-    # No teardown needed for SQLite in this demo
 
 
 # ---------------------------------------------------------------------------
@@ -104,6 +103,8 @@ app.include_router(admin_gallery.router,       prefix=API_PREFIX)
 app.include_router(admin_pledge_classes.router,prefix=API_PREFIX)
 app.include_router(admin_donate.router,        prefix=API_PREFIX)
 app.include_router(admin_contact.router,       prefix=API_PREFIX)
+app.include_router(admin_rush.router,          prefix=API_PREFIX)
+app.include_router(admin_messages.router,      prefix=API_PREFIX)
 
 
 # ---------------------------------------------------------------------------
